@@ -10,6 +10,19 @@ Nevera FiveM Realtime Weather and Clock is a script for FiveM servers that synch
 - **Notification display**: Weather and time notifications are shown for 15 seconds.
 - **Fog disable option**: `set disable_fog "true"` to disable fog (useful for areas like Dalmatia, where fog is rare).
 
+### View Images
+1. **Data synchronization**:
+   ![Prva slika](https://i.imgur.com/8S7uUxb.png)
+
+2. **Data update**:
+   ![Ažuriranje podataka](https://i.imgur.com/axpJm9s.png)
+
+3. **Resmon value in game**:
+   ![Resmon](https://i.imgur.com/0L9ETkn.png)
+
+4. **Clock display in the upper left corner every 10 minutes, with a duration of 15 seconds**: 
+   ![Prikaz sata](https://i.imgur.com/CovWD3l.png)
+
 ## Installation
 1. **Download the script** and place it in the `resources` folder of your FiveM server.
 2. **Configure your `server.cfg` file**: Add the following lines to your `server.cfg` to run the script:
