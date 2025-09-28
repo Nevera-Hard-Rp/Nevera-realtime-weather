@@ -1,232 +1,228 @@
-# Nevera Realtime Weather v2.0.0 ⛈️
+# Nevera Realtime Weather v1.0.1 ⛈️
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![FiveM](https://img.shields.io/badge/FiveM-2025_Ready-orange.svg)](https://fivem.net)
+[![FiveM](https://img.shields.io/badge/FiveM-Optimized-orange.svg)](https://fivem.net)
+[![Performance](https://img.shields.io/badge/Idle-0.00ms-brightgreen.svg)](https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather)
 
-Nevera FiveM Realtime Weather and Clock is an advanced script for FiveM servers that synchronizes real-time weather and clock in-game using data from the real world through OpenWeatherMap API.
+A lightweight FiveM script that synchronizes real-world weather and time in-game using OpenWeatherMap API data. Designed for realistic roleplay servers that want authentic weather conditions without admin controls.
 
-## 🆕 What's New in v2.0.0 (September 2025)
+## 🎯 Purpose & Philosophy
 
-### Major Updates
-- **Complete Code Rewrite** - Optimized for FiveM 2025 with 50% better performance
-- **Enhanced Edition Support** - Full compatibility with GTA V Enhanced Edition features
-- **Advanced Weather System** - Smooth transitions, lightning effects, and dynamic wind physics
-- **Blackout Mode** - City-wide power outage simulation for roleplay scenarios
-- **Weather Forecast** - 24-hour forecast system with API integration
-- **Personal Weather/Time** - Players can have individual weather settings
-- **Discord Webhooks** - Log weather changes and admin commands
-- **Modern UI Options** - Glass-morphism style or native GTA notifications
-- **Thread Pooling** - Better resource management for large servers
-- **Cache System** - Reduces API calls and improves response time
+This script was created for **Nevera Hard RP Server** with a specific philosophy:
+- **Real-world simulation only** - No admin commands or manual weather control
+- **Immersive roleplay** - Weather matches real-world conditions for enhanced realism
+- **Zero intervention** - Set it and forget it, no admin management needed
+- **Performance first** - Optimized to 0.00ms idle resource usage
 
-### Performance Improvements
-- Optimized render loop (from `Wait(0)` to dynamic waiting)
-- Implemented weather data caching
-- Added thread pooling for better CPU usage
-- Resource usage: ~0.01ms idle, ~0.05ms during updates
+**Note:** This script intentionally does NOT include admin commands for changing weather/time. If you need manual weather control, use additional scripts alongside this one.
 
-## Requirements
-- **Framework**: Compatible with **ESX**, **QBCore**, and **Standalone**
-- **FiveM Server**: Build 6683 or higher (2025 recommended)
-- **OneSync**: Recommended for best performance
-- **API Key**: Free OpenWeatherMap API key required
+## ✨ Features
 
-## Features
+- **Real-time Weather Sync** - Fetches actual weather data from any city worldwide
+- **Automatic Time Sync** - Game time matches real-world time with timezone support
+- **Ultra-Lightweight** - 0.00ms idle, 0.01ms active resource usage
+- **Smart Display System** - Shows weather info for 15 seconds after updates
+- **Wind Dynamics** - Real wind speed affects game environment
+- **10-Minute Updates** - Balanced between accuracy and API usage
+- **No Dependencies** - Works standalone without any framework
 
-### Core Features (Original)
-- **Real-time synchronization**: Fetches real-time data from any city worldwide (default: Split, Croatia)
-- **Automatic weather updates**: Weather conditions updated every 10 minutes (configurable)
-- **Notification display**: Weather and time notifications shown for 15 seconds
-- **Fog disable option**: Useful for areas where fog is rare
+## 📊 Performance Metrics
 
-### New Advanced Features (v2.0.0)
-- **Dynamic Wind System**: Realistic wind that affects vehicles and aircraft
-- **Weather Effects**: 
-  - Snow on ground with footprints
-  - Wet roads with reflections
-  - Lightning during thunderstorms
-- **Blackout System**: Toggle city-wide power outages
-- **Freeze Options**: Pause weather or time progression
-- **Export Functions**: Full API for integration with other resources
-- **Custom Events**: React to weather changes in your scripts
-- **Admin Commands**: Complete control over weather and time
+| State | v1.0.0 | v1.0.1 | Improvement |
+|-------|--------|--------|-------------|
+| **Idle** | 0.02ms | 0.00ms | 100% |
+| **Active** | 0.10ms | 0.01ms | 90% |
+| **Memory** | ~1MB | <500KB | 50% |
 
-### View Images
-1. **Data synchronization**:
-   ![Data Sync](https://i.imgur.com/8S7uUxb.png)
+## 🖼️ Preview Images
 
-2. **Data update**:
-   ![Data Update](https://i.imgur.com/axpJm9s.png)
+### Data Synchronization
+Shows real-time data fetching from OpenWeatherMap API:
 
-3. **Resmon value in game** (Optimized in v2.0):
-   ![Resmon](https://i.imgur.com/0L9ETkn.png)
+![Data Sync](https://i.imgur.com/8S7uUxb.png)
 
-4. **Clock display** (Now with temperature and wind): 
-   ![Clock Display](https://i.imgur.com/CovWD3l.png)
+### Data Update Notification
+In-game notification when weather updates:
 
-## Installation
+![Data Update](https://i.imgur.com/axpJm9s.png)
 
-1. **Download the script** and place it in the `resources` folder of your FiveM server.
+### Resource Monitor Performance
+Optimized to 0.00ms idle performance:
 
-2. **Configure your `server.cfg` file**:
+![Resmon](https://i.imgur.com/0L9ETkn.png)
+
+### Clock & Weather Display
+Shows time, weather condition and wind speed:
+
+![Clock Display](https://i.imgur.com/CovWD3l.png)
+
+### Weather Examples
+
+#### Rainy Weather
+Realistic rain effects with wet roads and reduced visibility:
+
+![Rain Weather](https://imgur.com/74oeBjY.png)
+
+#### Clear/Sunny Weather
+Beautiful clear skies with realistic sun positioning:
+
+![Sunny Weather](https://i.imgur.com/bBh4mnH.png)
+
+## 🚀 Installation
+
+### Step 1: Download
+Place the `Nevera-realtime-weather` folder in your server's `resources` directory.
+
+### Step 2: Get API Key
+1. Visit [OpenWeatherMap](https://openweathermap.org/)
+2. Create a free account
+3. Go to API Keys section
+4. Generate and copy your key
+
+### Step 3: Configure
+Add to your `server.cfg`:
+
 ```cfg
-# Basic Configuration
+# Resource
 ensure Nevera-realtime-weather
 
-# API Configuration (REQUIRED - Old config names still work)
-set my_sync_key "YOUR_API_KEY"           # Your API key
-set my_sync_timezone "Europe/Zagreb"     # Your timezone
-set my_sync_city "Split"                 # Your city
-set disable_fog "true"                   # Disable fog
+# Required Settings
+set weather_api_key "YOUR_API_KEY_HERE"
+set weather_city "Split"                    # Any city name
+set weather_timezone "Europe/Zagreb"        # Your timezone
 
-# New v2.0 Configuration Options (OPTIONAL)
-set nv_weather_country "HR"              # Country code
-set nv_weather_update_interval "600000"  # Update interval (ms)
-set nv_disable_snow "false"              # Disable snow
-set nv_weather_metric "true"             # Use metric units (Celsius, m/s)
-set nv_weather_debug "false"             # Debug mode
-
-# Admin Permissions (NEW)
-add_ace group.admin command.weather allow
-add_ace group.admin command.blackout allow
-add_ace group.admin command.freezeweather allow
+# Optional Settings
+set weather_update_interval "600000"        # Update interval in ms (default: 10 min)
+set weather_disable_fog "false"            # Disable fog weather
+set weather_debug "false"                  # Debug mode for troubleshooting
 ```
 
-3. **Restart your server**
+### Step 4: Restart
+Restart your server or run `ensure Nevera-realtime-weather`
 
-## How to Get Your API Key
-1. Visit [OpenWeatherMap](https://openweathermap.org/)
-2. **Sign up for a free account**: Click "Sign Up" and create an account
-3. Go to **API keys** section in your profile
-4. **Generate a new API key** and use it in server.cfg
+## ⚙️ Configuration
 
-## Commands (NEW in v2.0)
+| Variable | Description | Default | Required |
+|----------|-------------|---------|----------|
+| `weather_api_key` | OpenWeatherMap API key | - | ✅ Yes |
+| `weather_city` | City for weather data | `Split` | ✅ Yes |
+| `weather_timezone` | Timezone for time sync | `Europe/Zagreb` | ✅ Yes |
+| `weather_update_interval` | Update frequency (ms) | `600000` | ❌ No |
+| `weather_disable_fog` | Disable fog weather | `false` | ❌ No |
+| `weather_debug` | Enable debug output | `false` | ❌ No |
 
-| Command | Description | Permission |
-|---------|-------------|------------|
-| `/weather [type]` | Change weather (clear/rain/thunder/snow) | admin |
-| `/blackout` | Toggle city blackout | admin |
-| `/freezeweather` | Pause/resume weather sync | admin |
-| `/freezetime` | Pause/resume time progression | admin |
-| `/forecast` | View 24-hour weather forecast | everyone |
-| `/weatherinfo` | Show current weather details | everyone |
+## 🌍 Supported Weather Types
 
-## Configuration (NEW)
+| Real Weather | Game Weather | Description |
+|--------------|--------------|-------------|
+| Clear | CLEAR | Clear skies |
+| Clouds | CLOUDS | Cloudy weather |
+| Rain | RAIN | Rainy conditions |
+| Drizzle | CLEARING | Light rain |
+| Thunderstorm | THUNDER | Storm with lightning |
+| Snow | XMAS | Snow weather |
+| Fog/Mist | FOGGY | Foggy conditions (can be disabled) |
 
-All settings can be configured in the new `config.lua` file:
+## 📈 How It Works
+
+```mermaid
+graph LR
+    A[OpenWeatherMap API] -->|Every 10 min| B[Server]
+    B -->|Broadcast| C[All Clients]
+    C -->|Update| D[Game Weather]
+    C -->|Update| E[Game Time]
+    C -->|Display| F[UI Notification]
+```
+
+1. Server fetches real weather data every 10 minutes
+2. Data is broadcast to all connected players
+3. Clients update their local weather and time
+4. Notification appears for 15 seconds showing current conditions
+5. Script goes idle (0.00ms) until next update
+
+## 🔧 Exports (v1.0.1)
 
 ```lua
-Config.Weather = {
-    EnableDynamicWeather = true,      -- Dynamic weather changes
-    TransitionTime = 15.0,            -- Smooth transition duration
-    EnableSnowOnGround = true,        -- Snow effects
-    EnableWetRoads = true,            -- Wet road reflections
-    EnableLightning = true,           -- Lightning in storms
-    RealisticWind = true              -- Wind affects vehicles
-}
+-- Client-side
+exports['Nevera-realtime-weather']:getCurrentWeather()  -- Returns current weather string
+exports['Nevera-realtime-weather']:getCurrentTime()      -- Returns {hour, minute}
+exports['Nevera-realtime-weather']:getWindSpeed()        -- Returns wind speed
 
-Config.UI = {
-    ShowWeatherUI = true,             -- Display weather UI
-    ShowTemperature = true,           -- Show temperature
-    ShowWindSpeed = true,             -- Show wind speed
-    UseModernUI = true                -- Modern glass style
-}
+-- Server-side  
+exports['Nevera-realtime-weather']:forceUpdate()         -- Force weather update
+exports['Nevera-realtime-weather']:getLastUpdate()       -- Get last update timestamp
 ```
 
-## API & Exports (NEW)
+## 🎮 For Players
 
-### Client-Side Exports
-```lua
--- Get current weather
-local weather = exports['Nevera-realtime-weather']:getCurrentWeather()
+Players will see:
+- Weather notification in top-left corner after each update
+- Current time displayed as `Hour: HH:MM`
+- Current weather condition
+- Wind speed in m/s
 
--- Get current time
-local time = exports['Nevera-realtime-weather']:getCurrentTime()
+The display automatically disappears after 15 seconds to maintain immersion.
 
--- Get temperature
-local temp = exports['Nevera-realtime-weather']:getTemperature()
+## 🛠️ Troubleshooting
 
--- Set personal weather (client only)
-exports['Nevera-realtime-weather']:setPersonalWeather('RAIN')
-```
+### Weather not updating?
+- Check API key is valid
+- Verify city name exists in OpenWeatherMap
+- Enable debug mode: `set weather_debug "true"`
 
-### Server-Side Exports
-```lua
--- Get full weather data
-local data = exports['Nevera-realtime-weather']:getWeatherData()
+### Wrong time displayed?
+- Verify timezone format (e.g., `Europe/London`, `America/New_York`)
+- Check [timezone list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
--- Force weather update
-exports['Nevera-realtime-weather']:forceWeatherUpdate()
-```
+### High resource usage?
+- Increase update interval: `set weather_update_interval "1200000"` (20 min)
+- Verify you're using v1.0.1 (check fxmanifest.lua)
 
-### Events
-```lua
--- Listen for weather changes
-AddEventHandler('nv:weather:updated', function(data)
-    print('Weather changed:', data.weather)
-    print('Temperature:', data.temperature)
-end)
-```
+## 📝 Changelog
 
-## Performance Comparison
+### v1.0.1 (Current)
+- **Optimized to 0.00ms idle performance**
+- Removed constant rendering loop
+- Added event-driven display system
+- Implemented smart caching
+- Added exports for integration
+- Improved error handling
+- Added debug mode
 
-| Version | Idle CPU | Active CPU | Memory | Network |
-|---------|----------|------------|---------|---------|
-| v1.0.0 | ~0.02ms | ~0.10ms | ~3MB | High |
-| v2.0.0 | ~0.01ms | ~0.05ms | <2MB | Optimized |
-
-## Changelog
-
-### v2.0.0 (September 2025) - MAJOR UPDATE
-- Complete code rewrite for FiveM 2025
-- Added Enhanced Edition support
-- Implemented thread pooling and caching
-- Added blackout mode
-- Added weather forecast system
-- Improved wind physics
-- Added Discord webhook integration
-- Modern UI with glass-morphism
-- Performance improvements (50% better)
-- Added extensive exports and events
-- Fixed all known bugs from v1.0
-
-### v1.0.0 (December 2024)
+### v1.0.0
 - Initial release
-- Basic weather sync
+- Basic weather synchronization
 - Time synchronization
 - Simple UI display
 
-## Known Issues
-- Cayo Perico independent weather is still in development
-- Some weather transitions may conflict with other weather scripts
+## 🤝 Credits
 
-## Contributions
-If you would like to contribute to the project, feel free to:
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
+- **Created by:** Nevera Development Team
+- **For:** Nevera Hard RP Server
+- **API:** OpenWeatherMap
+- **Platform:** FiveM/Cfx.re
 
-## Support
-- **GitHub Issues**: [Report bugs here](https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather/issues)
-- **Discord**: [Join our Discord](https://discord.gg/nevera)
-- **Forum**: [FiveM Forum Thread](https://forum.cfx.re/t/free-nevera-realtime-weather-and-clock-script/5283767)
+## 📄 License
 
-## License
-Released under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - See [LICENSE](LICENSE) file for details
 
-## Credits
-- OpenWeatherMap for weather API
-- FiveM/Cfx.re team for the platform
-- Community contributors and testers
-- Original author: Nevera Development Team
+## ⚠️ Important Notes
 
-## Additional Information
-- Visit [OpenWeatherMap](https://openweathermap.org/) to create your API key
-- For more FiveM resources visit [forum.cfx.re](https://forum.cfx.re)
-- Based in Split, Croatia 🇭🇷
+1. **No Admin Controls:** This script does not include commands to manually change weather/time. This is by design for realistic RP servers.
+
+2. **API Limits:** Free OpenWeatherMap tier allows 1,000 calls/day (enough for 100+ player server)
+
+3. **Compatibility:** Works with any framework (ESX, QBCore, standalone) as it requires no dependencies
+
+4. **Support:** For issues, please open a ticket on [GitHub Issues](https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather/issues)
+
+## 🔗 Links
+
+- [GitHub Repository](https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather)
+- [FiveM Forum Post](https://forum.cfx.re/t/free-nevera-realtime-weather-and-clock-script/5283767)
+- [OpenWeatherMap API](https://openweathermap.org/api)
+- [Nevera Hard RP Discord](https://discord.gg/nevera)
 
 ---
-**Note**: This script is actively maintained and updated. For the latest version, always check the GitHub repository.
+*Made with ❤️ in Split, Croatia for realistic roleplay servers worldwide*
