@@ -50,7 +50,7 @@ In-game notification when weather updates:
 ### Resource Monitor Performance
 Optimized to 0.00ms idle performance:
 
-![Resmon](https://i.imgur.com/0L9ETkn.png)
+![Resmon](https://i.imgur.com/VrDTKzK.png)
 
 ### Clock & Weather Display
 Shows time, weather condition and wind speed:
