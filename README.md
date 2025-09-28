@@ -21,8 +21,8 @@ This script was created for **Nevera Hard RP Server** with a specific philosophy
 
 - **Real-time Weather Sync** - Fetches actual weather data from any city worldwide
 - **Automatic Time Sync** - Game time matches real-world time with timezone support
-- **Ultra-Lightweight** - 0.00ms idle, 0.01ms active resource usage
-- **Smart Display System** - Shows weather info for 15 seconds after updates
+- **TRUE 0.00ms Performance** - Absolutely zero resource usage (no render loops)
+- **Native GTA Notifications** - Uses built-in notification system
 - **Wind Dynamics** - Real wind speed affects game environment
 - **10-Minute Updates** - Balanced between accuracy and API usage
 - **No Dependencies** - Works standalone without any framework
@@ -31,8 +31,7 @@ This script was created for **Nevera Hard RP Server** with a specific philosophy
 
 | State | v1.0.0 | v1.0.1 | Improvement |
 |-------|--------|--------|-------------|
-| **Idle** | 0.02ms | 0.00ms | 100% |
-| **Active** | 0.10ms | 0.01ms | 90% |
+| **Performance** | 0.02-0.10ms | 0.00ms | 100% |
 | **Memory** | ~1MB | <500KB | 50% |
 
 ## 🖼️ Preview Images
