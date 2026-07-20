@@ -396,7 +396,7 @@ MIT — see [LICENSE](LICENSE).
 - [Cfx.re Forum Thread](https://forum.cfx.re/t/free-nevera-realtime-weather-and-clock-script/5283767)
 - [OpenWeatherMap Current Weather API](https://openweathermap.org/current)
 - [OpenWeatherMap Condition Codes](https://openweathermap.org/weather-conditions)
-- [Nevera Hard RP Discord](https://discord.gg/nevera)
+- [Nevera Hard RP Discord](https://discord.gg/k7uADMdFes)
 
 ---
 
