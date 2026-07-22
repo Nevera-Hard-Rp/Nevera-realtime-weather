@@ -64,7 +64,7 @@ server. If the sun sets at 20:41, it sets at 20:41 in game.
 
 **Clear**
 
-![Clear](https://i.imgur.com/WpUZlNo.png)
+![Clear](https://i.imgur.com/c2LESqA.png)
 
 **Console output on sync**
 
