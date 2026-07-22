@@ -1,13 +1,17 @@
 # Nevera Realtime Weather & Clock
 
 <div align="center">
-  <img src="https://nevera-rp.com/tebex/nevera-realtime-weather.png" alt="Nevera Realtime Weather" width="100%">
+  <a href="https://nevera-rp.com/tebex/nevera-realtime-weather.png" target="_blank" rel="noopener noreferrer">
+    <img src="https://nevera-rp.com/tebex/nevera-realtime-weather.png" alt="Nevera Realtime Weather" width="100%">
+  </a>
 </div>
 
-[![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)](https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![FiveM](https://img.shields.io/badge/FiveM-standalone-orange.svg)](https://fivem.net)
-[![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)](https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather)
+<p align="center">
+  <a href="https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/version-1.0.2-blue.svg" alt="Version"></a>
+  <a href="LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
+  <a href="https://fivem.net" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/FiveM-standalone-orange.svg" alt="FiveM"></a>
+  <a href="https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/dependencies-none-brightgreen.svg" alt="Dependencies"></a>
+</p>
 
 A lightweight FiveM script that synchronizes **real-world weather and time**
 in-game using OpenWeatherMap data. Built for roleplay servers that want
@@ -76,7 +80,7 @@ server. If the sun sets at 20:41, it sets at 20:41 in game.
 ## 📦 Requirements
 
 - FiveM server artifacts supporting `fx_version 'cerulean'`
-- A free [OpenWeatherMap](https://openweathermap.org/) API key
+- A free <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a> API key
 - Outbound HTTPS access from your server
 
 ---
@@ -87,7 +91,7 @@ server. If the sun sets at 20:41, it sets at 20:41 in game.
 
 **2.** Get an API key:
 
-- Register at [OpenWeatherMap](https://openweathermap.org/)
+- Register at <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a>
 - Open the **API keys** section of your profile
 - Generate a key
 
@@ -281,9 +285,9 @@ the API sends — leave them exactly as they are.
 
 ### Moving the panel
 
-In the render loop, `local y = 0.045` is the vertical starting point and
-`DrawText(0.015, y)` the horizontal one. Lower `y` moves the panel up, raise it
-to clear an FPS counter or another HUD element.
+In the render loop, `EndTextCommandDisplayText(0.015, 0.045)` — first number is
+horizontal, second is vertical. Lower the Y value to move the panel up, raise
+it to clear an FPS counter or another HUD element.
 
 ---
 
@@ -315,7 +319,11 @@ exports['Nevera-realtime-weather']:getLastUpdate()       -- unix timestamp
 | State | Cost |
 |---|---|
 | Panel hidden | **0.00 ms** |
-| Panel visible | 0.01–0.03 ms |
+| Panel visible | ~0.01–0.03 ms |
+
+The panel uses a single `DrawText` call (no `SetTextOutline`). Older builds
+drew four outlined lines every frame and could hit ~0.09 ms while visible —
+that was the spike you saw in resmon, not the weather sync itself.
 
 Set `my_sync_display "0"` for a constant 0.00 ms with no panel at all.
 
@@ -379,7 +387,7 @@ Set `my_sync_debug "true"` to print the full API response to console.
 
 - **Created by:** Nevera
 - **For:** Nevera Hard RP Server
-- **Weather data:** [OpenWeatherMap](https://openweathermap.org/)
+- **Weather data:** <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a>
 - **Platform:** FiveM / Cfx.re
 
 Thanks to **@TheAgentDap**, **@Patronum_Studio**, **@Jota.Fivem** and
@@ -387,16 +395,16 @@ Thanks to **@TheAgentDap**, **@Patronum_Studio**, **@Jota.Fivem** and
 
 ## 📄 License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see <a href="LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</a>.
 
 ## 🔗 Links
 
-- [Changelog](CHANGELOG.md)
-- [GitHub Repository](https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather)
-- [Cfx.re Forum Thread](https://forum.cfx.re/t/free-nevera-realtime-weather-and-clock-script/5283767)
-- [OpenWeatherMap Current Weather API](https://openweathermap.org/current)
-- [OpenWeatherMap Condition Codes](https://openweathermap.org/weather-conditions)
-- [Nevera Hard RP Discord](https://discord.gg/k7uADMdFes)
+- <a href="CHANGELOG.md" target="_blank" rel="noopener noreferrer">Changelog</a>
+- <a href="https://github.com/Nevera-Hard-Rp/Nevera-realtime-weather" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+- <a href="https://forum.cfx.re/t/free-nevera-realtime-weather-and-clock-script/5283767" target="_blank" rel="noopener noreferrer">Cfx.re Forum Thread</a>
+- <a href="https://openweathermap.org/current" target="_blank" rel="noopener noreferrer">OpenWeatherMap Current Weather API</a>
+- <a href="https://openweathermap.org/weather-conditions" target="_blank" rel="noopener noreferrer">OpenWeatherMap Condition Codes</a>
+- <a href="https://discord.gg/k7uADMdFes" target="_blank" rel="noopener noreferrer">Nevera Hard RP Discord</a>
 
 ---
 
