@@ -1,8 +1,8 @@
 # Nevera Realtime Weather & Clock
 
 <div align="center">
-  <a href="https://nevera-rp.com/tebex/nevera-realtime-weather.png" target="_blank" rel="noopener noreferrer">
-    <img src="https://nevera-rp.com/tebex/nevera-realtime-weather.png" alt="Nevera Realtime Weather" width="100%">
+  <a href="https://i.imgur.com/pSlTAgv.png" target="_blank" rel="noopener noreferrer">
+    <img src="https://i.imgur.com/pSlTAgv.png" alt="Nevera Realtime Weather" width="100%">
   </a>
 </div>
 
