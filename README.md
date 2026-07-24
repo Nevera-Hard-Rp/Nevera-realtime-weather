@@ -46,8 +46,7 @@ server. If the sun sets at 20:41, it sets at 20:41 in game.
 - **On-screen panel** — time, conditions, temperature and wind, top-left
 - **Admin override** — force any weather type for a set duration, with automatic
   return to real conditions
-- **Resilient** — retries on failure, keeps last known data, explains errors
-- clearly
+- **Resilient** — retries on failure, keeps last known data, explains errors clearly
 - **No dependencies** — ESX, QBCore, QBox or standalone
 
 ---
